@@ -10,9 +10,11 @@ namespace PDF_Creator
     public partial class MainWindow : Window
     {
         FileSelectionLogic FileSelectionLogic;
+        PdfCreationLogic PdfCreationLogic;
         public MainWindow()
         {
             FileSelectionLogic = new FileSelectionLogic();
+            PdfCreationLogic = new PdfCreationLogic();
             InitializeComponent();
         }
 
@@ -28,7 +30,7 @@ namespace PDF_Creator
 
         private void CreatePDF_Click(object sender, RoutedEventArgs e)
         {
-
+            PdfCreationLogic.CreatePdfFromImages(FileSelectionLogic.SelectedFilePaths, FileSelectionLogic.OutputFilePath);
         }
     }
 }
