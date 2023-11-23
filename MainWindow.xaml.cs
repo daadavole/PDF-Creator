@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Win32;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace PDF_Creator
 {
@@ -20,19 +9,21 @@ namespace PDF_Creator
     /// </summary>
     public partial class MainWindow : Window
     {
+        FileSelectionLogic FileSelectionLogic;
         public MainWindow()
         {
+            FileSelectionLogic = new FileSelectionLogic();
             InitializeComponent();
         }
 
         private void SelectImages_Click(object sender, RoutedEventArgs e)
         {
-
+            FileSelectionLogic.SelectImages();
         }
 
         private void SelectOutput_Click(object sender, RoutedEventArgs e)
         {
-
+            FileSelectionLogic.SelectOutputFile();
         }
 
         private void CreatePDF_Click(object sender, RoutedEventArgs e)
