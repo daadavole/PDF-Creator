@@ -7,6 +7,25 @@
         mc:Ignorable="d"
         Title="PDF Creator" Height="360" Width="600">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="SelectImages" Content="Select Images" Width="100" Height="35" Click="SelectImages_Click"/>
+            <TextBlock x:Name="ImgNames" Text="img names"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="SelectOutput" Content="Select Output" Width="100" Height="35" Click="SelectOutput_Click"/>
+            <TextBlock x:Name="OutputPath" Text="output path"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button x:Name="CreatePDF" Content="Create PDF" Width="100" Height="35" Click="CreatePDF_Click"/>
+            <TextBlock x:Name="Status" Text="creation status"/>
+        </StackPanel>
     </Grid>
 </Window>

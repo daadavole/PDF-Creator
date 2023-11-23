@@ -24,5 +24,20 @@ namespace PDF_Creator
         {
             InitializeComponent();
         }
+
+        private void SelectImages_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void SelectOutput_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void CreatePDF_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
