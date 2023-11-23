@@ -11,6 +11,7 @@ namespace PDF_Creator
     internal class FileSelectionLogic
     {
         public string[] SelectedFilePaths;
+        public string OutputFilePath;
         public void SelectImages() // Image selection method
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -70,8 +71,10 @@ namespace PDF_Creator
 
                 // Perform actions with the selected output file path
                 MessageBox.Show($"Selected output file: {pdfOutputPath}");
+                
+                // Assign the file path to public property 
+                OutputFilePath = pdfOutputPath;
             }
-
         }
     }
 }
