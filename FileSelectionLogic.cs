@@ -23,7 +23,7 @@ namespace PDF_Creator
             openFileDialog.DefaultExt = ".txt";
 
             // Filter files by extension
-            openFileDialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
+            openFileDialog.Filter = "Image Files(*.PNG;*.BMP;*.JPG;*.GIF)|*.PNG;*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
 
             // Show the dialog and get the result, ShowDialog() can return nullable bool - bool?
             bool? result = openFileDialog.ShowDialog();
